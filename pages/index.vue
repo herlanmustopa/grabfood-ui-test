@@ -1,83 +1,59 @@
 <template>
-  <v-row justify="center" align="center">
-    <v-col cols="12" sm="8" md="6">
-      <v-card class="logo py-4 d-flex justify-center">
-        <NuxtLogo />
-        <VuetifyLogo />
-      </v-card>
-      <v-card>
-        <v-card-title class="headline">
-          Welcome to the Vuetify + Nuxt.js template
-        </v-card-title>
-        <v-card-text>
-          <p>Vuetify is a progressive Material Design component framework for Vue.js. It was designed to empower developers to create amazing applications.</p>
-          <p>
-            For more information on Vuetify, check out the <a
-              href="https://vuetifyjs.com"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              documentation
-            </a>.
-          </p>
-          <p>
-            If you have questions, please join the official <a
-              href="https://chat.vuetifyjs.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              title="chat"
-            >
-              discord
-            </a>.
-          </p>
-          <p>
-            Find a bug? Report it on the github <a
-              href="https://github.com/vuetifyjs/vuetify/issues"
-              target="_blank"
-              rel="noopener noreferrer"
-              title="contribute"
-            >
-              issue board
-            </a>.
-          </p>
-          <p>Thank you for developing with Vuetify and I look forward to bringing more exciting features in the future.</p>
-          <div class="text-xs-right">
-            <em><small>&mdash; John Leider</small></em>
-          </div>
-          <hr class="my-3">
-          <a
-            href="https://nuxtjs.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Nuxt Documentation
-          </a>
-          <br>
-          <a
-            href="https://github.com/nuxt/nuxt.js"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Nuxt GitHub
-          </a>
-        </v-card-text>
-        <v-card-actions>
-          <v-spacer />
-          <v-btn
-            color="primary"
-            nuxt
-            to="/inspire"
-          >
-            Continue
-          </v-btn>
-        </v-card-actions>
-      </v-card>
-    </v-col>
-  </v-row>
+  <v-container fluid>
+    <v-layout>
+      <v-breadcrumbs
+        style="padding-left: 0px; margin-top: 100px"
+        large
+        :items="items"
+      />
+    </v-layout>
+    <div>
+      <p class="caption" style="color: #43a047">
+        <v-icon style="color: #43a047"> mdi-checkbox-marked-circle </v-icon>
+        Preferred Merchant
+      </p>
+    </div>
+    <p class="h2" style="font-size: 35px">Do Yan Seafood - Sumbersekar</p>
+    <p class="body">Seafood, Snack</p>
+    <v-row>
+      <p class="body2">
+        <v-icon style="color: gold"> mdi-star </v-icon>
+        4.7
+      </p>
+      <p class="body2" style="margin-left: 80px">664.1 km</p>
+    </v-row>
+    <v-row>
+      <p class="body2">Opening Hours</p>
+      <p class="body2" style="margin-left: 80px">Today 13:00-22:00</p>
+    </v-row>
+  </v-container>
 </template>
 
 <script>
 export default {
-  name: 'IndexPage'
-}
+  name: "IndexPage",
+  layout: "default",
+  data() {
+    return {
+      title: "Vuetify.js",
+      items: [
+        {
+          text: "Home",
+          disabled: false,
+          href: "breadcrumbs_dashboard",
+        },
+        {
+          text: "Restaurant",
+          disabled: false,
+          href: "breadcrumbs_link_1",
+        },
+        {
+          text: "Do Yan Seafood - Sumbersekar",
+          disabled: true,
+          href: "breadcrumbs_link_2",
+        },
+      ],
+    };
+  },
+};
 </script>
