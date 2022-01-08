@@ -1,5 +1,5 @@
 <template>
-  <v-card class="mx-auto" max-width="450" hover="true">
+  <v-card class="mx-auto" max-width="450" hover=true>
     <v-list-item three-line>
       <v-list-item-avatar
         tile
