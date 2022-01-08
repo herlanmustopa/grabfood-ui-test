@@ -40,6 +40,8 @@ export default {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [],
+  distDir: "build",
+  target: "serverless",
 
   // Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify
   vuetify: {
@@ -65,4 +67,7 @@ export default {
   // },
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
+  // generate: {
+  //   dir: "my-site",
+  // },
 };
