@@ -27,7 +27,7 @@
         placeholder="Type youre Location"
         dense
         prepend-inner-icon="mdi-map-marker"
-        solo
+        outlined
         elevation="1"
       ></v-text-field>
       <v-btn outlined style="margin-right: 10px; margin-top: 15px">
